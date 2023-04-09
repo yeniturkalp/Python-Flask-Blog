@@ -1,0 +1,23 @@
+body{
+    margin-top:20px;
+    background-color: #ffffff;
+}
+.card {
+    margin-bottom: 5px;
+    box-shadow: 0 1px 15px 1px rgba(214, 196, 196, 0.63);
+}
+
+.card {
+    position: relative;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #020202;
+    background-clip: border-box;
+    border: 1px solid #e5e9f2;
+    border-radius: .2rem;
+    height: 250px;
+    width: 250px;
+}

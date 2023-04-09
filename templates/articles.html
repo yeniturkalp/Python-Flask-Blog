@@ -1,0 +1,47 @@
+{% extends 'layout.html' %}
+
+
+
+{% block body %}
+
+<h2>Okuma Sayfası</h2>
+<hr>
+
+{% if articles %}
+
+ <form class="form-inline my-2 my-lg-0" action="/search" method = "post">
+    <input class="form-control mr-sm-2" name = "keyword" type="search" placeholder="Yazı Ara">
+    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Ara</button>
+  </form> 
+  <hr>
+
+{% for article in articles %}
+<!--
+    <ul class="list-group">
+        <li class="list-group-item"><a href="/article/{{article.id}}">{{article.title}}</a> <br><small>{{article.author}}</small></li>
+        
+    </ul>-->
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title" style="color: rgb(52, 8, 94);">{{article.title}} -  {{article.author}}</h5>
+            <hr>
+            <p class="card-text">{{article.title}}</p>
+            <a href="/article/{{article.id}}" class="btn btn-primary">Devamını oku</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+{% endfor %}
+
+{% else %}
+<!-- <div class="alert alert-danger"> Bu blogta henüz yazı bulunmuyor</div>-->
+
+{% endif %}
+
+
+
+{% endblock %}

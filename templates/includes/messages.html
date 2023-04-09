@@ -1,0 +1,19 @@
+{% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    
+    {% for category, message in messages %}
+    <br>
+    <div class="alert alert-{{category}}">
+    <div class="container-fluid">
+
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true"><i class="fa-solid fa-xmark fa-lg"></i></span>
+    </button>
+  </div>
+  <i class="fa-solid fa-hand fa-lg"></i> {{ message }} 
+</div> 
+  </div>
+    {% endfor %}
+    
+  {% endif %}
+{% endwith %}

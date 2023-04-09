@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+{% if article %}
+
+<br>
+<h4>{{article.title}}</h4>
+<hr>
+
+{{article.content|safe}}
+<hr>
+<i class="fa-solid fa-user fa-lg"></i> <span style="color: rgb(168, 168, 168);">{{article.author}}</span><br>  
+<i class="fa-regular fa-calendar-days fa-lg"></i> {{article.created_date}}
+<hr>
+
+
+{% else %}
+<br>
+<div class="alert alert-danger"> Bir yazınız bulunmuyor..</div>
+
+{% endif %}
+
+{% endblock  %}

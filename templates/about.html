@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/about.css')}}">
+<link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='css/card.css')}}">
+
+<h3 class="text-center">HAKKIMDA</h3>
+<hr>
+<!--
+<section class="team-section py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <div class="card border-0 shadow-lg pt-5 my-5 position-relative">
+                        <div class="card-body p-4">
+                            <div class="member-profile position-absolute w-100 text-center">
+                                <img class="rounded-circle mx-auto d-inline-block shadow-sm" src="https://cdn-icons-png.flaticon.com/128/4140/4140048.png" alt="">
+                            </div>
+                            <div class="card-text pt-1">
+                                <h5 class="member-name mb-0 text-center text-primary font-weight-bold">Alpaslan Yenitürk</h5>
+                                <div class="mb-3 text-center">Urgent Tech - Founder</div>
+                                <div>8 Mart 2000 tarihinde dünyada yeni bir güneş doğdu. Bu güneşin adı, Alpaslan Yenitürk. Öğrenmeye açık ve öğrendiği her bilgi kırıntısını çevresi ile paylaşmasından mutluluk duyan bir genç. Bu blog yazılım dünyasında kendi gelişimi için bir milad olmasını temenni ediyor. </div>
+                            </div>
+                        </div>
+                        <div class="card-footer theme-bg-primary border-0 text-center">
+                            <ul class="social-list list-inline mb-0 mx-auto">
+                                <li class="list-inline-item"><a class="text-dark" href="https://www.linkedin.com/in/alpaslan-yenit%C3%BCrk-2485b01ab/"><i style="color:#1E3050;" class="fab fa-linkedin-in fa-fw fa-lg"></i></a></li>
+                                <a  class="list-inline-item" href="https://github.com/yeniturkalp"><i style="color:#1E3050;" class="fa-brands fa-github fa-xl"></i></a>
+                                <li class="list-inline-item"><a class="text-primary" href="#"><i class="fab fa-twitter fa-fw fa-lg"></i></a></li>
+                                <li class="list-inline-item"><a class="text-dark" href="#"><i class="fa-brands fa-instagram fa-xl"></i></a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>   
+-->
+<div class="container">
+    <div class="main-body">
+    
+          <!-- Breadcrumb -->
+          <nav aria-label="breadcrumb" class="main-breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="/">Urgent Tech</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Hakkımda</li>
+            </ol>
+          </nav>
+          <!-- /Breadcrumb -->
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://media.licdn.com/dms/image/D4D03AQEbGgbd__tMZg/profile-displayphoto-shrink_200_200/0/1673970785405?e=1685577600&v=beta&t=e3DWshzj2-snbq7EP_W8FLTimq4WeMldk4Kgosqw7bM" alt="Admin" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <h4>Alpaslan Yenitürk</h4>
+                      <p class="text-secondary mb-1">Jr. Full Stack Developer</p>
+                      <p class="text-muted font-size-sm">İnegöl/Bursa</p>
+                      <button class="btn btn-primary">Takip Et!</button>
+                      <button class="btn btn-outline-primary">Mesaj</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card mt-3">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-globe mr-2 icon-inline"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>Website</h6>
+                    <a href="https://medium.com/@yeniturkalpaslan4">yeniturkalpaslan</a>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><a class="list-inline-item" href="https://github.com/yeniturkalp"><i style="color:#1E3050;" class="fa-brands fa-github fa-xl"></i></a> Github</h6>
+                    <span class="text-secondary">yeniturkalp</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><li class="list-inline-item"><a class="text-primary" href="#"><i class="fab fa-twitter fa-fw fa-lg"></i></a></li> Twitter</h6>
+                    <span class="text-secondary">@yeniturkalp</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"><li class="list-inline-item"><a class="text-dark" href="#"><i class="fa-brands fa-instagram fa-xl"></i></a></li> Instagram</h6>
+                    <span class="text-secondary">alpaslanyeniturk</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center flex-wrap">
+                    <h6 class="mb-0"> <li class="list-inline-item"><a class="text-dark" href="https://www.linkedin.com/in/alpaslan-yenit%C3%BCrk-2485b01ab/"><i style="color:#1E3050;" class="fab fa-linkedin-in fa-fw fa-lg"></i></a></li>LinkedIn</h6>
+                    <span class="text-secondary">alpaslanyeniturk</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Ad - Soyad</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Alpasan Yenitürk
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      yeniturkalpaslan4@gmail.com
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">İletişim</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      543-639-75-73
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Konum</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Inegöl-Bursa
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-info " target="__blank" href="">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="d-flex align-items-center mb-3">Yetenekler</h5>
+                            <p>Python</p>
+                            <div class="progress mb-3" style="height: 5px">
+                                <div class="progress-bar bg-primary" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p>Web Design</p>
+                            <div class="progress mb-3" style="height: 5px">
+                                <div class="progress-bar bg-danger" role="progressbar" style="width: 72%" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p>HTML-CSS-JS</p>
+                            <div class="progress mb-3" style="height: 5px">
+                                <div class="progress-bar bg-success" role="progressbar" style="width: 89%" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p>Mobile Template</p>
+                            <div class="progress mb-3" style="height: 5px">
+                                <div class="progress-bar bg-warning" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <p>Backend API</p>
+                            <div class="progress" style="height: 5px">
+                                <div class="progress-bar bg-info" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        </div>
+    </div>
+{% endblock  %}

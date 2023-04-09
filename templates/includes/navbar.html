@@ -1,0 +1,57 @@
+<style>
+.nav-link{
+  color: white;
+}
+.navbar-expand-md{
+  background-color: #e2e2e25d;
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(10px);
+    border: 0.5px solid rgba(245, 245, 245, 0.116);
+}
+
+</style>
+
+<nav  class="navbar navbar-expand-md navbar-light fixed-top">
+    <a class="navbar-brand" href="/"><i class="fa-brands fa-cuttlefish fa-2xl"></i></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/about">Hakkımda</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="/articles">Yazılar</a>
+          </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto dropdown">
+      {% if session["logged_in"] %}
+    
+      <li class="nav-item">
+        <button type="button" class="btn btn-outline-primary me-3">
+          <a class="nav-link active" href="/dashboard">Kontrol Paneli</a>
+        </button>
+        <button type="button" class="btn btn-outline-primary me-3">
+          <a class="nav-link active" href="/logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+        </button>
+        <!-- <button type="button" class="btn btn-primary me-3">
+          <a class="nav-link active" href="/userdelete">Hesabımı Sil</a>
+        </button> -->
+      </li>
+      {% else %}
+      <li class="nav-item dropdown">
+        <button type="button" class="btn btn-outline-primary me-3">
+        <a class="nav-link active" href="/register">Kayıt Olun</a>
+        </button>
+     
+        <button type="button" class="btn btn-outline-primary me-3">
+        <a class="nav-link active" href="/login"><i class="fa-solid fa-right-to-bracket fa-lg"></i> Giriş Yapın</a>
+        </button>
+      </li>
+    
+      {% endif %}
+      </ul>
+  </div>
+</nav>
