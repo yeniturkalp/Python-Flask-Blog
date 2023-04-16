@@ -1,13 +1,16 @@
 {% extends 'layout.html' %}
+
+{% block body  %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfB">
-{% block body %}
-{% from 'includes/formhelpers.html' import render_field %}    
+{% from 'includes/formhelpers.html' import render_field %}  
+
+
 <!-- <form method="post" class="">
     {{ render_field(form.username) }}
     {{ render_field(form.password) }}
     <button type="subbit" class="btn btn-primary"> Giriş Yap </button>
 </form> -->
+
 
 <!-- <div class="login-box">
     <h2>Login</h2>
@@ -19,52 +22,34 @@
       <input type="submit" value="Login">
     </form>
   </div> -->
-  <div class="container pb-5 mb-sm-4">
-      <div class="row pt-5">
-          <div class="col-md-6 pt-sm-3">
-              <div class="card">
-                  <div class="card-body">
-                      <h2 class="h4 mb-1">Giriş Yap</h2>
-                      <div class="d-sm-flex align-items-center py-3">
-                          <h3 class="h6 font-weight-semibold opacity-70 mb-3 mb-sm-2 mr-sm-3">Sosyal medya hesapları ile giriş:</h3>
-                          <div>
-                            <button  class="btn btn-fab btn-primary">
-                                <i class="fab fa-twitter fa-fw fa-lg"></i>
-                            </button>
-                            <button class="btn btn-fab btn-primary">
-                                <i class="fa-brands fa-instagram fa-xl"></i>
-                            </button>
-                            <button  class="btn btn-fab btn-primary">
-                                <i class="fab fa-linkedin-in fa-fw fa-lg"></i>
-                            </button>
-                          </div>
-                      </div>
-                      <hr>
-                      <form class="needs-validation" method="POST" action="{{url_for('login')}}">
-                          <div class="input-group form-group">
-                              <div class="input-group-prepend"><span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span></div>
-                              <input class="form-control" placeholder="Kullanıcı adınız" type="text" name="username" id="username" required>
-                              <div class="invalid-feedback">Lütfen geçerli bir kullanıcı adı girin</div>
-                          </div>
-                          <div class="input-group form-group">
-                              <div class="input-group-prepend"><span class="input-group-text"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-lock"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span></div>
-                              <input class="form-control" placeholder="Şifreniz" type="password" name="password" id="password" required >
-                              <div class="invalid-feedback">Lütfen geçerli bir şifre girin</div>
-                          </div>
-                          <div class="d-flex flex-wrap justify-content-between">
-                              <div class="custom-control custom-checkbox">
-                                  <input class="custom-control-input" type="checkbox" checked="" id="remember_me">
-                                  <label class="custom-control-label" for="remember_me">Beni hatırla</label>
-                              </div><a class="nav-link-inline font-size-sm" href="account-password-recovery.html">Parolanızı mı unuttunuz?</a>
-                          </div>
-                          <hr class="mt-4">
-                          <div class="d-flex flex-wrap justify-content-between">
-                              <button class="btn btn-primary" type="submit">Giriş Yap</button> <div class="text-right pt-4"><a class="btn btn-info " target="__blank" href="/register">Kayıt Ol</a>    
-                          </div>    
-                      </form>
-                  </div>
-              </div>
-          </div>      
-      </div>
+  
+  <div style="margin-top: 10px;" class="register-panel container-fluid h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="register-panel-col bg-white shadow-lg p-5">
+        <img src="{{url_for('static', filename='images/login.svg')}}" alt="Admin" width="250" class="img-fluid my-5 mt-md-0 d-block mx-auto rounded-circle" >
+
+        <h1 class="font-weight-bold">Giriş Yap</h1>
+        <div class="row mt-4">
+        </div>
+        <form method="POST" action="{{url_for('login')}}">
+        <div class="row mt-3">
+          <div class="col-12 col-md-6">
+            <span class="d-block mb-2">Kullanıcı Adınız</span>
+            <input class="w-100 p-2" spellcheck="false" type="text" name="username" id="username" required placeholder="Kullanıcı Adınız">
+          </div>
+
+          <div class="col-12 col-md-6 mt-3 mt-md-0">
+            <span class="d-block mb-2">Şifreniz</span>
+            <input class="w-100 p-2" spellcheck="false" type="password" name="password" id="password" required placeholder="Kullanıcı Adınız">
+          </div>  
+        </div>
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+              <button type="subbit" class=" w-100 py-2 btn btn-primary"> Giriş Yap </button>
+            </div>
+            </div>
+    </form>
+    </div>
+    </div>
   </div>
 {% endblock  %}

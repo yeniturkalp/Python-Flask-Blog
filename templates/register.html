@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/register.css') }}">
+
 {% block body %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 {% from 'includes/formhelpers.html' import render_field %} 
 <!-- <form method="POST" action="{{url_for('login')}}">
     {{ render_field(form.name, class="form-control")}}
@@ -17,54 +18,55 @@
     <input type="password" name="password" id="password" required>
     <input type="submit" value="Login">
   </form> -->
-<div class="container h-100">
-    <div class="row h-100">
-        <div class="col-sm-10 col-md-8 col-lg-6 mx-auto d-table h-100">
-            <div class="d-table-cell align-middle">
 
-                <div class="text-center mt-4">
-                    <h1 class="h3">Kayıt Olun</h1>
-                    <p class="lead">
-                        Yeni fikirler için bize katıl!
-                    </p>
+<div style="padding-bottom: 25px; margin-top: 10px;" class="register-panel container-fluid h-500">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="register-panel-col bg-white shadow-lg p-5">
+            <img src="{{url_for('static', filename='images/login.svg')}}" alt="Admin" width="150" class="img-fluid my-5 mt-md-0 d-block mx-auto rounded-circle" >
+            <h1 class="font-weight-bold">Kullanıcı Bilgileri</h1>
+            <form method="POST" action="{{url_for('register')}}">
+                <div class="row mt-4">
+                <div class="col-12">
+                    <span class="d-block mb-2">İsim Soyisim</span>
+                    <input class="w-100 p-2" spellcheck="false type="text" name="name"  id="name"placeholder="İsim Soyisim" required">
                 </div>
-                <div class="card">
-                    <div class="card-body">
-                        <div class="m-sm-4">
-                            <form method="POST" action="{{url_for('register')}}">
-                                <div class="form-group">
-                                    <label>İsim Soyisim</label>
-                                    <input class="form-control form-control-lg" type="text" name="name"  id="name"placeholder="İsim Soyisim" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Kullanıcı Adı</label>
-                                    <input class="form-control form-control-lg" type="text" name="username" id="username" placeholder="Kullanıcı Adı" required >
-                                </div>
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input class="form-control form-control-lg" type="email" name="email" id ="email" placeholder="Mail adresiniz" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Şifreniz</label>
-                                    <input class="form-control form-control-lg" type="password" name="password" id = "password" placeholder="Şifreniz" required>
-                                </div>
-                                <div class="form-group">
-                                    <label>Tekrar şifreniz</label>
-                                    <input class="form-control form-control-lg" type="password" name="confirm" id = "confirm" placeholder="Tekrar şifreniz" required>
-                                </div>
-                                <div class="text-center mt-3">
-                                    <button type="subbit" class="btn btn-primary"> Kayıt Ol </button>
-                                    <!-- <button type="submit" class="btn btn-lg btn-primary">Sign up</button> -->
-                                </div>
-                            </form>
-                        </div>
+                </div>
+
+                <div class="row mt-3">
+                <div class="col-12">
+                    <span class="d-block mb-2">Kullanıcı Adı</span>
+                    <input  class="w-100 p-2" spellcheck="false" name="username" id="username" placeholder="Kullanıcı Adı" required >
+                </div>
+                </div>
+
+                <div class="row mt-4">
+                <div class="col-12">
+                    <span class="d-block mb-2">Email</span>
+                    <input class="w-100 p-2" spellcheck="false" type="email" name="email" id ="email" placeholder="Mail adresiniz" required>
+                </div>
+                </div>
+
+                <div class="row mt-4">
+                <div class="col-12">
+                    <span class="d-block mb-2">Şifre</span>
+                    <input class="w-100 p-2" spellcheck="false" type="password" name="password" id = "password" placeholder="Şifreniz" required>
+                </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-12">
+                        <span class="d-block mb-2">Tekrar Şifre</span>
+                        <input class="w-100 p-2" spellcheck="false" type="password" name="confirm" id = "confirm" placeholder="Tekrar şifreniz" required>
                     </div>
                 </div>
-            </div>
+                <div class="row mt-5">
+                    <div class="col-12 text-center">
+                        <button type="subbit" class=" w-100 py-2 btn btn-primary"> Kayıt Ol </button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
 </div>
-
 
 
 
