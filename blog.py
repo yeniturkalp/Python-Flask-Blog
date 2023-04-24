@@ -3,6 +3,7 @@ from flask_mysqldb import MySQL
 from wtforms import Form,StringField,TextAreaField,PasswordField,validators
 from functools import wraps
 from passlib.handlers.sha2_crypt import sha256_crypt
+
 # import mysql.connector
 
 def login_required(f):
